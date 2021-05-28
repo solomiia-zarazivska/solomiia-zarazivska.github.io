@@ -1,0 +1,54 @@
+#songs {
+	background-color:#c3c3bd;
+    display: flex;
+	min-height: 100vh;
+	padding: 30px;
+}
+
+#songs .container {
+	max-width: 1280px;
+	margin: auto;
+}
+
+.songs-box {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	max-height: 70vh;
+}
+
+a.song {
+	color: #fff;
+	font-weight: 500; 
+	font-size: 1.5rem;
+	position: relative;
+	z-index: 1;
+	margin-bottom: .35em;
+}
+
+a.song span {
+	position: relative;
+	z-index: 1;
+}
+
+a.song::before {
+	content:"";
+	position: absolute;
+	left:0;
+	top:0;
+	width:125%;
+	height:125%;
+	background-image: url("../img/spot.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	z-index: 0;
+	opacity: 0;
+	transition: all .3s ease;
+	transform: translateY(50%);
+}
+
+a.song:hover::before {
+	opacity: 1;
+	transform: none;
+}
+

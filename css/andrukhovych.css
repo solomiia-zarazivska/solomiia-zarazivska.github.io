@@ -1,0 +1,37 @@
+.andr {
+	background-color:#cbc3bd;
+    display: flex;
+	min-height: 100vh;
+	padding: 30px;
+}
+
+.andr .container {
+	max-width: 800px;
+	width: 100vw;
+	right: 0;
+	display: flex;
+	margin: auto;
+	align-items: center;
+	align-content: space-between;
+	flex-wrap: wrap;
+}
+
+.andr .text {
+	max-width: 50%;
+	top: 0;
+	min-height: 100%;
+}
+.andr h2 {
+	color: #903;
+	line-height: 100%;
+	font-weight: 700;
+}
+
+.andr p {
+	font-size: 1.5rem;
+}
+
+.andr .img-andr {
+	max-width: 50%;
+	right: 0;
+}

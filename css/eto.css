@@ -1,0 +1,24 @@
+.eto .overlay {
+	background-color: rgba(100,80,60,.2);
+	color: rgba(255,255,255,1);
+	padding: 25px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	mix-blend-mode: normal;
+    opacity: 1;
+}
+
+.eto .overlay h1,
+.eto .overlay p {
+	max-width: 600px;
+	text-align: center;
+}
+
+.eto .overlay p {
+	max-width: 600px;
+	text-align: center;
+	font-size: 2.5rem;
+}

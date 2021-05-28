@@ -1,0 +1,118 @@
+.pop-overlay {
+	background-color: rgba(50,50,50,.5);
+	position: absolute;
+	left:0; top: 0;
+	width: 100%;
+	height: 100%;
+	opacity:0;
+	transition: opacity .3s ease;
+	z-index: -1;
+	cursor: pointer;
+}
+
+.pop-overlay.open {
+	opacity: 1;
+	z-index:9;
+}
+
+.popup {
+	background-color: #903;
+	position:absolute;
+	right: 0;
+	top: 0;
+	height: 100%;
+	width: 75%;  /* змінити */
+	max-width: 400px;
+	padding: 15px;
+	transform: translateX(100%);
+	transition: all .5s ease;
+	/*transition: all .5s ease;*/
+	z-index:9999;
+	cursor: default;
+}
+
+.close {
+	position: absolute;
+	left: 12px;
+	top: 0;
+	color:#fff;
+	font-size: 3rem;
+	cursor: pointer;
+}
+
+.open .popup {
+	transform: translateX(0);
+}
+
+a.popup-lnk {
+	color: #903;
+	display: inline-block;
+	font-weight: 500;
+	min-height: 80px; 
+	position: relative;
+}
+
+a.popup-lnk:hover {
+	color: #fff;
+}
+
+a.popup-lnk span {
+	z-index:1;
+	position: relative;
+	font-weight: 700;
+}
+
+a.popup-lnk::before {
+	content:"";
+	position: absolute;
+	left:-18px;
+	top:-18px;
+	width:125%;
+	height:125%;
+	background-image: url("../img/spot.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	z-index:0;
+	opacity: 0;
+	transition: all .3s ease;
+	transform: translateX(50%);
+}
+
+a.popup-lnk:hover::before {
+	opacity: 1;
+	transform: none;
+}
+
+.popup {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.popup p {
+	color:#fff;
+	margin-top: 2em;
+	font-size:1rem;
+	max-width: 280px;
+}
+
+.img-popup img {
+	display: block;
+	width:100%;
+	max-width: 280px;
+	margin:auto;
+	
+}
+
+@media screen and (max-aspect-ratio:1/1) and (max-width:767px) {
+
+	.popup .img-popup {
+		width: 100%; /* змінити */
+	}
+
+	.img-popup img {
+		max-height:50vh;
+		width:auto;
+	}
+}

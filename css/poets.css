@@ -1,0 +1,110 @@
+.poets {
+	background-color: #d4cdc8;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right top;
+    background-blend-mode: hard-light;
+    display: flex;
+	/*color: #ccc;*/
+	min-height: 100vh;
+	padding: 30px 70px;
+}
+
+.poets .slide {
+	max-height: 90vh;
+    padding: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    position: relative;
+}
+
+.fp-tableCell {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-height: 90%;
+}
+
+.author {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.author p {
+    margin-top: .25em;
+    margin-bottom: 0;
+}
+
+.poets .slide .text {
+	width: 50%;
+	max-width: 450px;
+	color: black;
+}
+
+.poets .slide .pict {
+	width: 40%;
+	padding: 0 25px;
+}
+
+.slide .pict img {
+	display: block;
+	width: 100%;
+}
+
+.poets .slide h2 {
+	max-width: 800px;
+	text-align: left;
+	color: #903;
+	font-weight: 700;
+	font-size:2rem;
+	line-height: 110%;
+}
+
+.fp-controlArrow.fp-prev {
+    left: 60px;
+    width: 0;
+    border-width: 18px 16px 18px 0;
+    border-color: transparent #fff transparent transparent;
+}
+
+.fp-controlArrow.fp-next {
+    right: 60px;
+    border-width: 18px 0 18px 16px;
+    border-color: transparent transparent transparent #fff;
+}
+
+.fp-controlArrow {
+    position: absolute;
+    z-index: 4;
+    top: 50%;
+    cursor: pointer;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    margin-top: -18px;
+    -webkit-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+@media screen and (orientation:portrait) {
+
+	.poets .slide .text {
+		width: 90%;
+	}
+
+	.poets .slide .pict {
+		width: 90%;
+		padding: 0;
+	}
+
+	.slide .pict img {
+	}
+}
